@@ -78,10 +78,11 @@ headdim_vals = [64, 128]
 dim = 2048
 dropout_p = 0.0
 
-methods = (["Flash2", "Pytorch"]
-           + (["Triton"] if attention_triton is not None else [])
-           + (["xformers.c"] if xops is not None else [])
-           + (["xformers.f"] if xops is not None else []))
+# methods = (["Flash2", "Pytorch"]
+#            + (["Triton"] if attention_triton is not None else [])
+#            + (["xformers.c"] if xops is not None else [])
+#            + (["xformers.f"] if xops is not None else []))
+methods = ["Triton"]
 
 time_f = {}
 time_b = {}
