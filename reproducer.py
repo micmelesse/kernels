@@ -71,8 +71,7 @@ try:
         attention_triton, q, k, v, causal, headdim**(-0.5),
         sequence_parallel, repeats=repeats, verbose=True
     )
+    print(f"b: {b}")
+    print("Success!")
 except Exception as e:
     print(f"An error occurred: {e}")
-
-print(f"b: {b}")
-print("Success!")
